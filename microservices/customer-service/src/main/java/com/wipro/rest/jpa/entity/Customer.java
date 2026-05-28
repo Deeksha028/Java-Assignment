@@ -5,8 +5,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Bank")
-public class Bank {
+@Table(name="customer")
+public class Customer {
 	
 	@Id
 	private long accountNumber;
@@ -14,11 +14,11 @@ public class Bank {
     private String bankName;
     private double balance;
     
-    public Bank() {
+    public Customer() {
     	
     }
     
-	public Bank(long accountNumber, String accountHolderName, String bankName, double balance) {
+	public Customer(long accountNumber, String accountHolderName, String bankName, double balance) {
 		super();
 		this.accountNumber = accountNumber;
 		this.accountHolderName = accountHolderName;
@@ -28,7 +28,7 @@ public class Bank {
 	public long getAccountNumber() {
 		return accountNumber;
 	}
-	public void setAccountNumber(int accountNumber) {
+	public void setAccountNumber(long accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 	public String getAccountHolderName() {
